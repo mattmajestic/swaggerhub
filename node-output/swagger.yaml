@@ -7,7 +7,7 @@
   },
   "servers" : [ {
     "url" : "https://virtserver.swaggerhub.com/MATTMAJESTIC/youtube/1.0.0",
-    "description" : "SwaggerHub API Auto Mocking"
+    "description" : "API for Majestic Coding YouTube"
   }, {
     "url" : "https://mattmajestic.dev/youtube-metrics",
     "description" : "Majestic Coding API"
