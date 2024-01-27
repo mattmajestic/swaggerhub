@@ -1,0 +1,60 @@
+{
+  "openapi" : "3.0.0",
+  "info" : {
+    "title" : "Majestic Coding API",
+    "description" : "API for accessing YouTube metrics",
+    "version" : "1.0.0"
+  },
+  "servers" : [ {
+    "description" : "API for Majestic Coding YouTube",
+    "url" : "https://virtserver.swaggerhub.com/MATTMAJESTIC/youtube/1.0.0"
+  }, {
+    "url" : "https://mattmajestic.dev/youtube-metrics",
+    "description" : "Majestic Coding API"
+  } ],
+  "paths" : {
+    "/" : {
+      "get" : {
+        "summary" : "Retrieve YouTube Video Metrics",
+        "description" : "Returns a list of YouTube video metrics",
+        "operationId" : "getYouTubeVideoMetrics",
+        "responses" : {
+          "200" : {
+            "description" : "A list of YouTube video metrics",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "type" : "array",
+                  "items" : {
+                    "type" : "object",
+                    "properties" : {
+                      "Video ID" : {
+                        "type" : "string",
+                        "description" : "Unique identifier for the video"
+                      },
+                      "Views" : {
+                        "type" : "string",
+                        "description" : "Number of views for the video"
+                      },
+                      "Likes" : {
+                        "type" : "string",
+                        "description" : "Number of likes for the video"
+                      },
+                      "Comments" : {
+                        "type" : "string",
+                        "description" : "Number of comments for the video"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500" : {
+            "description" : "Internal Server Error"
+          }
+        }
+      }
+    }
+  }
+}
